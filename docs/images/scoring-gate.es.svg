@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <style>
+    .flow { stroke-dasharray: 6 6; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    .box { fill: #F4F6F7; stroke: #CBD0D3; stroke-width: 1.5; }
+    .title { fill: #14212B; font-family: Fraunces, Georgia, 'Times New Roman', serif; font-size: 17px; font-weight: 600; }
+    .sub { fill: #4A5963; font-size: 11.5px; }
+    .label { fill: #4A5963; font-size: 11.5px; font-style: italic; }
+    .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+  </style>
+  <rect width="1000" height="420" fill="#E6E9EA"/>
+  <defs>
+    <marker id="ink" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#14212B"/></marker>
+    <marker id="rust" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#A8420E"/></marker>
+    <marker id="muted" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8B949B"/></marker>
+  </defs>
+  <rect class="box" x="20" y="70" width="150" height="250" rx="6"/>
+  <text class="title" x="95" y="100" text-anchor="middle">Entradas</text>
+  <text class="sub mono" x="95" y="132" text-anchor="middle">train-set-features</text>
+  <text class="sub" x="95" y="148" text-anchor="middle">último snapshot por combo</text>
+  <text class="sub mono" x="95" y="282" text-anchor="middle">xgb_base.pkl</text>
+  <text class="sub" x="95" y="298" text-anchor="middle">champion</text>
+  <rect class="box" x="215" y="70" width="165" height="64" rx="6"/>
+  <text class="title" x="297.5" y="101.0" text-anchor="middle">elasticity.py</text>
+  <text class="sub" x="297.5" y="121.0" text-anchor="middle">curvas · 0-50%, 9 puntos</text>
+  <rect class="box" x="215" y="250" width="165" height="64" rx="6"/>
+  <text class="title" x="297.5" y="281.0" text-anchor="middle">score.py</text>
+  <text class="sub" x="297.5" y="301.0" text-anchor="middle">uplift · confianza · semáforo</text>
+  <rect class="box" x="425" y="250" width="160" height="64" rx="6"/>
+  <text class="title" x="505.0" y="281.0" text-anchor="middle">staging.py</text>
+  <text class="sub" x="505.0" y="301.0" text-anchor="middle">validaciones · ROI margen</text>
+  <rect class="box" x="425" y="150" width="160" height="50" rx="6"/>
+  <text class="title" x="505.0" y="174.0" text-anchor="middle">cv_report.json</text>
+  <text class="sub" x="505.0" y="194.0" text-anchor="middle">del training</text>
+  <rect x="630" y="155" width="150" height="95" rx="6" fill="#14212B"/>
+  <text class="title" x="705.0" y="194.5" text-anchor="middle" style="fill:#FFFFFF">dryrun.py</text>
+  <text x="705.0" y="214.5" text-anchor="middle" font-size="11.5" fill="#CBD0D3">12 checks entre</text>
+  <text x="705.0" y="229.5" text-anchor="middle" font-size="11.5" fill="#CBD0D3">artefactos</text>
+  <rect class="box" x="825" y="70" width="160" height="80" rx="6" stroke="#A8420E"/>
+  <text class="title" x="905.0" y="102.0" text-anchor="middle">publish/</text>
+  <text class="sub" x="905.0" y="122.0" text-anchor="middle">predicciones + curvas</text>
+  <text class="sub" x="905.0" y="137.0" text-anchor="middle">→ DataOps → Snowflake</text>
+  <rect class="box" x="825" y="260" width="160" height="80" rx="6"/>
+  <text class="title" x="905.0" y="292.0" text-anchor="middle">RuntimeError</text>
+  <text class="sub" x="905.0" y="312.0" text-anchor="middle">publish/ sin cambios</text>
+  <text class="sub" x="905.0" y="327.0" text-anchor="middle">se dispara reentreno</text>
+  <path class="flow" d="M170,102 H215" stroke="#14212B" stroke-width="2" fill="none" marker-end="url(#ink)"/>
+  <path class="flow" d="M170,282 H215" stroke="#14212B" stroke-width="2" fill="none" marker-end="url(#ink)"/>
+  <path class="flow" d="M380,282 H425" stroke="#14212B" stroke-width="2" fill="none" marker-end="url(#ink)"/>
+  <path class="flow" d="M380,102 C600,102 605,180 630,180" stroke="#14212B" stroke-width="2" fill="none" marker-end="url(#ink)"/>
+  <text class="label" x="470" y="92" text-anchor="middle">curvas de elasticidad</text>
+  <path class="flow" d="M585,282 C610,282 610,230 630,230" stroke="#14212B" stroke-width="2" fill="none" marker-end="url(#ink)"/>
+  <path class="flow" d="M585,175 C605,175 610,205 630,205" stroke="#8B949B" stroke-width="1.5" fill="none" marker-end="url(#muted)"/>
+  <path class="flow" d="M780,185 C805,185 805,110 825,110" stroke="#A8420E" stroke-width="2" fill="none" marker-end="url(#rust)"/>
+  <text class="label" x="808" y="108" text-anchor="end">aprobado</text>
+  <path class="flow" d="M780,225 C805,225 805,300 825,300" stroke="#8B949B" stroke-width="1.5" fill="none" marker-end="url(#muted)"/>
+  <text class="label" x="812" y="268" text-anchor="end">falla algún check</text>
+  <text x="500.0" y="395" fill="#4A5963" font-size="12.5" text-anchor="middle">dryrun.py es el único paso que ve todos los artefactos. publish.py copia solo si el dry run aprueba.</text>
+</svg>
