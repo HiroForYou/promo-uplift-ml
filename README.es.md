@@ -165,3 +165,7 @@ Los diagramas se generan, no se editan a mano:
 ```bash
 python scripts/build_diagrams.py
 ```
+
+## Licencia
+
+[MIT](LICENSE)

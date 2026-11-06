@@ -167,3 +167,7 @@ python scripts/build_diagrams.py
 ```
 
 Code comments and console output are in Spanish.
+
+## License
+
+[MIT](LICENSE)
